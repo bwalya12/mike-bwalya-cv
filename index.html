@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mike Bwalya | Academic Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, Arial;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+transition:0.4s;
+}
+
+.dark{
+background:#121212;
+color:white;
+}
+
+header{
+text-align:center;
+padding:40px;
+background:#0a3d62;
+color:white;
+}
+
+header img{
+width:160px;
+border-radius:50%;
+border:5px solid white;
+margin-bottom:15px;
+}
+
+nav{
+background:#082c45;
+padding:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#00d2ff;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px;
+}
+
+section{
+margin-bottom:70px;
+animation:fade 1s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+h2{
+margin-bottom:15px;
+color:#0a3d62;
+}
+
+.dark h2{
+color:#00d2ff;
+}
+
+.btn{
+display:inline-block;
+margin-top:15px;
+background:#00a8ff;
+color:white;
+padding:10px 20px;
+text-decoration:none;
+border-radius:5px;
+}
+
+.timeline{
+border-left:4px solid #0a3d62;
+padding-left:20px;
+}
+
+.timeline div{
+margin-bottom:25px;
+}
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.dark .card{
+background:#1e1e1e;
+}
+
+.projects a{
+display:block;
+margin:8px 0;
+font-weight:bold;
+color:#0a3d62;
+}
+
+.dark .projects a{
+color:#00d2ff;
+}
+
+.publication{
+background:#eef3f9;
+padding:15px;
+border-radius:6px;
+margin-bottom:15px;
+}
+
+.dark .publication{
+background:#2a2a2a;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#0a3d62;
+color:white;
+}
+
+.toggle{
+position:fixed;
+right:20px;
+top:20px;
+padding:10px 15px;
+border:none;
+background:#00a8ff;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<button class="toggle" onclick="darkMode()">Dark Mode</button>
+
+<header>
+
+<img src="passport.jpg" alt="Profile Photo">
+
+<h1>Mike Bwalya</h1>
+
+<p>Environmental & Aquaculture Researcher</p>
+
+<p>MSc Biology (Ecology & Biodiversity) – Copperbelt University</p>
+
+<a href="Mike_Bwalya_CV.pdf" class="btn">Download CV</a>
+
+</header>
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#publications">Publications</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="container">
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<p>
+
+    Environmental and aquaculture researcher with a BSc in Fisheries and Aquaculture, currently pursuing an MSc in Biology (Ecology & Biodiversity) at Copperbelt University. I focus on aquatic ecosystem health, biodiversity, water quality, and heavy metal bioaccumulation.
+
+I combine research with technology, using Python, data science, and analytics to study and solve environmental and biological challenges. Passionate about sustainable aquaculture, climate resilience, and conservation, I aim to work as a research scientist and tech-driven environmental innovator.
+
+
+</p>
+</section>
+
+<section id="research">
+
+<h2>Research Portfolio</h2>
+
+<div class="timeline">
+
+<div>
+
+<h3>MSc Research</h3>
+
+<p>
+Assessment of Heavy Metals Bioaccumulation and Microbial Diversity in Farmed and Wild Tilapia in the Kafue River – Kitwe District.
+</p>
+
+</div>
+
+<div>
+
+<h3>Undergraduate Research</h3>
+
+<p>
+Effects of Copper Deposits on Tilapia in Aquatic Systems – Case Study of the Kafue River.
+</p>
+
+</div>
+
+<div>
+
+<h3>Biodiversity Monitoring</h3>
+
+<p>
+Environmental monitoring and biodiversity auditing in mining ecosystems.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2>Interactive Skills</h2>
+
+<div class="skills-grid">
+
+<div class="card">
+<canvas id="dataChart"></canvas>
+</div>
+
+<div class="card">
+<canvas id="programmingChart"></canvas>
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2>Technology Projects</h2>
+
+<div class="projects">
+
+<a href="https://bwalya12.github.io/Zambia_Virtual_Farm_Market/">Zambia Virtual Farm Market</a>
+
+<a href="https://bwalya12.github.io/masoka_manda/">Masoka Manda Website</a>
+
+<a href="https://bwalya12.github.io/cdf_online_system_version2/">CDF Online System</a>
+
+</div>
+
+</section>
+
+<section id="publications">
+
+<h2>Publications</h2>
+
+<div class="publication">
+
+<strong>Review Article (Ongoing)</strong>
+
+<br>
+
+The Rising Cost of Protein-Based Fish Feed: Exploring Sustainable Alternatives for Aquaculture.
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p><i class="fa fa-envelope"></i> mikebwalya7@gmail.com</p>
+
+<p><i class="fa fa-phone"></i> 0760149581</p>
+
+<p><i class="fa fa-map-marker"></i> Kitwe, Zambia</p>
+
+</section>
+
+</div>
+
+<footer>
+
+© 2026 Mike Bwalya | Research Scientist
+
+</footer>
+
+<script>
+
+function darkMode(){
+document.body.classList.toggle("dark");
+}
+
+new Chart(document.getElementById("dataChart"),{
+
+type:"bar",
+
+data:{
+labels:["SPSS","Excel","R","Stata"],
+datasets:[{
+label:"Data Analysis Skills",
+data:[90,95,85,80]
+}]
+}
+
+});
+
+new Chart(document.getElementById("programmingChart"),{
+
+type:"radar",
+
+data:{
+labels:["Python","HTML","CSS","JavaScript","PHP","SQL"],
+datasets:[{
+label:"Programming Skills",
+data:[85,90,85,70,75,80]
+}]
+}
+
+});
+
+</script>
+
+</body>
+</html>
+
